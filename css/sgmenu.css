@@ -1,0 +1,125 @@
+div.general-menu {
+	height: 25px;
+	color:white;
+	*background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.2, rgb(33, 61, 75)), color-stop(0.8, rgb(119, 116, 131)), color-stop(0.89, rgb(118, 111, 121)) );
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.2, rgb(48, 70, 69)), color-stop(0.8, rgb(116, 131, 117)), color-stop(0.89, rgb(111, 121, 115)) );
+	*background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.2, rgb(33, 75, 73)), color-stop(0.8, rgb(116, 131, 117)), color-stop(0.89, rgb(111, 121, 115)) );
+
+}
+
+div.calc.app.window > div.body-container {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,201,221,1)), color-stop(46%,rgba(201,208,214,1)), color-stop(100%,rgba(220,225,229,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(184,201,221,1) 0%,rgba(201,208,214,1) 46%,rgba(220,225,229,1) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+div.general.head.container{
+	height:30px;
+	background-color:rgb(54,75,74);
+	opacity:0.8;
+}
+
+div.sgapp.window>div.body.container>div.general-content{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: white;
+	left: 4;
+	right: 4;
+	
+}
+div.sgapp.window>div.body.container>div.general-menu:first-child  + div.general-content{
+	top:25
+}
+
+
+div.sgapp.window>div.body.container>div.general-menu:first-child + div.general-menu + div.general-content{
+	top:50px;
+}
+div.sgapp.window>div.body.container>div.general-menu:first-child + div.general-menu + div.general-menu + div.general-content{
+	top:75px;
+}
+div.sgapp.window>div.body.container{
+	padding-left:4px;
+	padding-right:4px;
+	background-color:rgb(54,75,74)!important;
+}
+
+div.general-menu-bar:hover{
+	color:white;
+	border-color:white;
+	border-bottom-width:0px;
+	-webkit-box-shadow: 2px 0px 24px rgba(228, 228, 228, 0.8755);
+	
+}
+div.general-menu-bar:first-child{
+	margin-left:10px
+}
+div.general-menu-bar:after {
+		background-color:red;
+}
+div.general-menu-bar {
+	float:left;
+	content:'';
+	-webkit-box-shadow: 2px 0px 104px rgba(228, 228, 228, 0.66175);
+	*margin-right:10px;
+		*border-radius:4px;
+	color:#9CCABA;
+	-webkit-transition:color 0.5s, border-color 1s, -webkit-box-shadow 0.5s;
+	height:21px;
+	border:solid 0.5mm transparent;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:2px;
+	margin-right:2px;
+	border-bottom-width:0px;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+position:relative;
+}
+div.general-menu-bar>div.effect{
+	background-color:white;
+	left: 0px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	opacity: 0.2;
+border-top-left-radius:4px;
+border-top-right-radius:4px;	
+}
+
+div.line-text{
+	position:relative;
+	float:left;
+	outline-width:0px!important;
+}
+div.toolbox{
+	height:15px; 
+	width:15px;
+	background-color:black; 
+}
+div.toolbox[state="1"]{
+	background-color:red; 
+}
+
+div.caret[state="1"]{}
+
+div.caret{
+	border-left:solid 1px red;
+	margin-left:1px;
+	height:20px;
+	position:absolute;
+	width:1px;
+	
+	-webkit-animation: mycaret 1s infinite
+}
+
+@-webkit-keyframes mycaret /* Safari and Chrome */
+{
+from {opacity: 1;}
+to {opacity: 0;}
+}
+
+div.textNode{
+	display:inline;
+}

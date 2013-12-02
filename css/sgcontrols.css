@@ -1,0 +1,71 @@
+div.sginput{
+	background-color:transparent;
+	background-color:white;
+	position:relative;
+	top:100;
+	left:100;
+	height:20px;
+	width:200px;
+	border:solid 0.5mm #888;
+	border-radius:5px;
+	
+}
+
+div.sgcaret{
+	border:none;
+	background-color:transparent;
+	height:15px;
+	width:0px;
+	opacity:0;
+	*left:3;
+	top:2;
+	position:absolute;
+	border-right:solid 1px red;
+	-webkit-transition:right 3s, border 1s;
+	-webkit-animation: mycaret 1s infinite	
+}
+
+div.sgcaret[state="1"]{
+	width:20px;
+}
+
+div.sgcaret[state="0"]{
+	width:2px;
+}
+
+@-webkit-keyframes mycaret /* Safari and Chrome */
+{
+from {border-right: solid 1px red;}
+to {border-right: solid 1px transparent;}
+}
+
+div.textNode{
+	display:inline;
+}
+
+div.sgfocusable[state="1"] {
+	-webkit-box-shadow:0px 0px 14px rgba(28, 28, 28, .555)
+}
+
+div.sgfocusable[state="1"]>div.sgcaret {
+	opacity:1;
+		border-color:black;
+	-webkit-animation-play-state: running;
+	width:auto;
+}
+div.sgfocusable[state="0"]>div.sgcaret {
+	border-color:transparent;
+	-webkit-animation-play-state: paused;
+	width:0px;
+	
+}
+
+div.focusable-text {
+	position:relative;
+	border:none;
+	background-color:transparent;
+	color:red;
+	display:inline;
+	*left:3px;
+	
+}

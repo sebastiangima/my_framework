@@ -1,0 +1,183 @@
+body div._insp__{
+	outline:solid 1px red!important;
+}
+
+*{
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+div.desktop{
+	background-image: url('../img/background1.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-attachment: fixed;
+	position:fixed;
+	left:0px;
+	width:100%;
+	top:0px;
+	bottom:0%;
+	z-index:0;
+}
+
+div.domhelper.capturer{
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	z-index:0;
+	background-color:transparent;
+	border:none;
+	margin:0px;
+	padding:0px;
+}
+div.domhelper.capturer[active="0"]{
+	z-index:0;
+}
+
+div.domhelper.capturer[active="1"]{
+	z-index:1500;
+}
+
+div.triangle[state="1"]{
+	-webkit-transform:translateX(5px) translateY(5px) rotateZ(540deg);
+	border-bottom: 6px solid #fc2e5a;
+	border-bottom: 4px solid blue;
+	}
+div.triangle[state="0"]{
+	-webkit-transform:translateX(5px) translateY(5px) rotateZ(90deg);
+}
+
+div.triangle {
+	width: 0;
+	transition:-webkit-transform 0.5s, border-bottom 2s;
+	-webkit-transform:translateX(5px) translateY(5px) rotateZ(90deg);
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid #fc2e5a;
+}
+
+div.div-group[visible="1"]>div.div-groupped{
+	display:block;
+}
+div.div-groupped{
+	display:none;
+}
+
+div.drop-down{
+	position: relative;
+	height:200px;
+	width:200px;
+	float:left;
+	display:inline;
+}
+
+
+div.drop-down>div.items-box{
+	position:absolute;
+	height:200px;
+	width:100%;
+	border:solid 0.5mm black;
+	background-color:#ddd;
+	transition: height 0.8s, border-color 1s;
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-radius:3px;
+}
+div.drop-down[state="0"] > div.items-box{
+	height:0px;	
+	border-color:white;
+}
+div.drop-down[state="1"] > div.items-box{
+	height:200px;
+	border-color:black;
+}
+
+div.drop-down>div.items-box>div.items{
+	position:absolute	;
+	bottom:100%;
+	overflow:auto;
+	left:0px;
+	width:100%;
+}
+div.drop-down[state="0"]>div.items-box>div.items{
+	-webkit-animation: upper 1s;
+}
+div.drop-down[state="1"]>div.items-box>div.items{
+	overflow:hidden;
+	top:0;
+	bottom:auto;
+	-webkit-animation: downer 1s;
+}
+div.drop-down > div.items-box > div.items>div:hover{
+	background-color:#f0f0f0;
+}
+
+div.drop-down > div.items-box > div.items>div{
+	background-color:#ddd;
+	padding:0px 4px;
+	width:100%;
+}
+
+div.drop-button{
+	background-image:url('../img/drop-button.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	position:absolute;
+	height:18px;
+	width:18px;
+	right:1px;
+	left:auto;
+	top:1px;
+	bottom:auto;
+	z-index:15000;
+}
+
+div.drop-down-input {
+	height:30px;
+	position:relative;	
+	border:solid 0.5mm black;
+	border-radius:5px;
+	width:200px;
+}
+div.drop-down-input > div.drop-down-input {
+	position:absolute;
+	width:180;
+	border:none;
+	
+}
+
+@-webkit-keyframes downer /* Safari and Chrome */
+{
+0%   {bottom: 100%;}
+50%  {bottom:auto}
+100% {top:0}
+}
+@-webkit-keyframes upper /* Safari and Chrome */
+{
+0%   {bottom:0; height:100%; top:0}
+50% {height:100%}
+70% {height:100%}
+99% {height:0%}
+100% {bottom:100%;height:100%}
+}
+@-webkit-keyframes upperc /* Safari and Chrome */
+{
+100% {border:none;}
+}
+
+div.drop-check[state="1"]{
+	background-color:red;
+}
+div.drop-check{
+	border:solid 0.5mm gray;
+	height:10px;
+	width:10px;
+	float:left;
+	margin-top:5px;
+	margin-right:2px;
+}

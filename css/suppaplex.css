@@ -1,0 +1,165 @@
+
+.suppaplex>div.body-content{
+	background-color:black;
+	position:absolute;
+	left:0;
+	right:0;
+	width:auto;
+	top:50px;
+	bottom:0;
+	height:auto;
+	overflow:hidden;
+}
+div.suppaplex{
+	height:100%;
+	width:100%;
+}
+
+div.suppacel{
+	height:32px;
+	width:32px;
+	background-repeat: no-repeat;
+	position:absolute;
+}
+
+
+div.expansible-info {
+	border-left:solid 1px black;
+	border-bottom:solid 1px black;
+}
+
+div.pseudo-float-left {
+	display: inline;
+	white-space: pre;
+	font-family: courier;
+}
+
+div.float-left{
+	position:relative;
+	float:left;
+}
+
+div.border-top-right{
+	border-top: solid 1px black;
+	border-right: solid 1px black;
+}
+
+div.border {
+	border: solid 1px black;
+}
+
+div.suppacel>img{
+  position:absolute;  
+}
+
+div.supa-panel {
+	position:absolute;
+	height:46px;
+	width:auto;
+	left:0;
+	right:0;
+	top:0;
+	bottom:auto;
+	border: solid 2px red;
+	background-color:black;
+}
+div.supa-text{
+	background-color:#aaa;
+	color:black;
+	display:inline;
+	width:100px;
+}
+div.supa-label{
+	width:100px;
+	color:white;
+	display:inline-table;
+	text-align:right;
+	margin-right:10px;
+}
+div[mode="EDIT"] div.supa-panel-control.edit{
+	display:block;
+}
+div[mode="PLAY"] div.supa-panel-control.play{
+	display:block;
+}
+div.supa-panel-control.play,
+div.supa-panel-control.edit{
+	position:absolute;
+	top:0;
+	color:white;
+	display:none;
+	height:auto;
+	bottom:0;
+	left:0;
+	right:0;
+	border:solid 1px orange;
+}
+div.supa-panel-modo{   
+	position:absolute;
+	right:0;
+	width:200px;
+	top:0;
+	height:20px;
+	
+	z-index:1;
+}
+
+div.supa-panel-control {
+	font-size:10px;
+	height:12px;
+	display: inline;
+}
+
+div.supa-panel-control input{
+	height: 12px;
+	font-size: 10px;
+	width: auto;
+	display: inline;
+	width: 30px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+	color: white;	
+}
+
+div.supa-shape-bar{
+	position:absolute;
+	bottom:0;
+	height:32px;
+	left:0;
+	right:0;
+	width:auto;
+}
+
+div.supa-shape-bar div.suppacel[activated="0"] {
+	opacity:0.5;
+}
+div.supa-shape-bar div.suppacel[activated="1"] {
+	opacity:1;
+}
+div.suppa-panel-commands{
+	display:block;
+	position:relative;
+}
+
+div.suppa-command:hover{
+	opacity:1;
+}
+div.suppa-command{
+	background-image: -webkit-linear-gradient(bottom, rgb(106,162,217) 5%, rgb(166,204,222) 50%, rgb(214,224,235) 94%);
+	padding:5px;
+	border-radius:4px;
+	margin:2px 5px;
+	width:60px;
+	height:14px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bolder;
+	color:white;
+	display:inline;
+	position:relative;
+	opacity:0.8;
+	float:left;
+
+}

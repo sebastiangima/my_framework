@@ -1,0 +1,31 @@
+div.sgbuttonbox{
+	position:absolute;
+}
+
+div.sgbuttonbox>div{
+	position:relative;
+}
+
+div.sgbuttonbox>div>div{
+	position:absolute;
+}
+
+div.sgbuttonbox.vertical>div{
+	border: solid 1px red;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: auto;
+	display:block;
+	height:20px;
+}
+div.sgbuttonbox.vertical{
+	position:relative;
+	
+}
+
+div.sgbuttonbox.horizontal>div{
+	float:left;
+	display:inline-block;
+	height:20px;
+}

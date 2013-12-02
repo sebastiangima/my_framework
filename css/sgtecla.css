@@ -1,0 +1,88 @@
+div.sgbar.title-bar.calc {
+	background-image: url('img/icons/icocalc1.png');
+	background-size: 26;
+	padding-left:32;
+}
+div.calc.sgapp.window{
+	min-width:210px;
+	max-width:210px;
+	width:210px;
+}
+
+div.calc-menu {
+	height: 15px;
+}
+div.calc-pantalla {
+	height: 49px;
+	border: solid 1px black;
+	margin: 10;
+	border-radius: 5;
+	position:relative;
+}
+div.calc.app.window > div.body-container {
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,201,221,1)), color-stop(46%,rgba(201,208,214,1)), color-stop(100%,rgba(220,225,229,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(184,201,221,1) 0%,rgba(201,208,214,1) 46%,rgba(220,225,229,1) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+
+div.calc-teclado{
+	position:relative;
+	margin-left:10px;
+}
+
+div.calc-tecla:hover{
+	*border:solid 0.5mm black;
+	opacity:1;
+	background-image: -webkit-linear-gradient(bottom, rgb(103, 154, 206) 5%, rgb(166,204,222) 50%, rgb(236, 242, 248) 94%);	
+}
+
+div.calc-tecla{
+	border:solid 0.5mm gray;
+	-webkit-transition:background-image 2s;
+	opacity:0.8;
+	border-radius:4px;
+	position:absolute;
+	height:20px;
+	line-height:14px;
+	width:32px;
+	font-size:16px;
+	padding-top:4px;
+	text-align:center;
+	position:absolute;
+	background-image: -webkit-linear-gradient(top, rgb(103, 154, 206) 5%, rgb(166,204,222) 50%, rgb(236, 242, 248) 94%);	
+}
+
+div.calc-tecla[fila="0"]{	top:0px;}
+div.calc-tecla[fila="1"]{	top:30px;}
+div.calc-tecla[fila="2"]{	top:60px;}
+div.calc-tecla[fila="3"]{	top:90px;}
+div.calc-tecla[fila="4"]{	top:120px;}
+div.calc-tecla[fila="5"]{	top:150px;}
+
+div.calc-tecla[col="0"]{	left:0px;}
+div.calc-tecla[col="1"]{	left:38px;}
+div.calc-tecla[col="2"]{	left:76px;}
+div.calc-tecla[col="3"]{	left:114px;}
+div.calc-tecla[col="4"]{	left:154px;}
+div.calc-tecla[col="5"]{	left:150px;}
+
+div.calc-tecla[ancho="2"]{	width:68px;}
+div.calc-tecla[alto="2"] {height:50px;}
+
+div.calc-pantalla-ecuation{
+	text-align: right;
+}
+
+div.calc-pantalla-input{
+	text-align: right;
+	font-size: 24px;
+}
+div.calc-pantalla-memory[state="1"]{
+	display:block;
+}
+div.calc-pantalla-memory{
+	color:red;
+	display:none;
+	position:absolute;
+	bottom:0px;
+}

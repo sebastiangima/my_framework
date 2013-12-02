@@ -1,0 +1,30 @@
+function SuppaCel(){}
+
+SuppaCel.prototype.baseClass='SgControlContainer'
+
+SuppaCel.prototype.getElement = function getElement(k,o){
+	return SuppaCel.prototype.base.getElement.call(this,k,o);
+}
+
+SuppaCel.prototype.paint = function paint(){
+	SuppaCel.prototype.base.paint.call(this)
+}	
+SuppaCel.prototype.init = function init(){
+	//classHelper.extend(this,this.protoParent);
+	var args = arguments[0] ? arguments[0] : {}
+
+	args.className=domHelper.mergeClassName(args.className,'suppacel');
+
+	args.innerHTML = args.caption || 'Vago Ponle Nombre';
+	if (args.caption) delete args.caption;
+	
+	SuppaCel.prototype.base.init.call(this,args);
+}
+
+function ISuppaCel(){
+	
+	
+	this.init(arguments[0]);
+}
+classHelper.register(SuppaCel);
+ISuppaCel.prototype=new SuppaCel();

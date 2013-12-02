@@ -1,0 +1,137 @@
+div.panel{
+	position:relative;
+	height:100%;
+	overflow:auto;
+	background-color:white;
+	left:0px;
+	right:0px;
+	border:none;
+	display:inline-block; 
+}
+div.panel.right:hover{
+	margin-right:0px;
+	right:0px;
+	opacity:0.8;
+}
+
+div.panel.left:hover{
+	margin-left:0px;
+	left:0px;
+	opacity:0.8;
+}
+
+div.panel.bottom:hover{
+	margin-bottom:0px;
+	bottom:0px;
+	opacity:0.8;
+}
+
+div.panel.left{
+	position:absolute;
+	transition:left 0.5s;
+	left:-30%;
+	width:30%;
+	opacity:0.8;
+	top:0px;
+	margin-left:5px;
+}
+div.panel.center{
+	position: absolute;
+	left: 6px;
+	right: 6px;
+	top:0px;
+	width: auto;
+}
+div.panel.right{
+	position:absolute;
+	right:-30%;
+	width:30%;
+	top:0px;
+	margin-right:5px;
+	transition:right 0.5s;
+	left:auto;
+}
+
+div.panel.bottom{
+	width:100%;
+	position:absolute;
+	bottom:-150px;
+	height:150px;
+	margin-bottom:5px;
+	left:3px;
+	transition:bottom 0.5s;
+	right:3px;
+	width:auto;	
+}
+
+div.horizontal{
+	*height:80%;
+
+	position:absolute;
+	top:55px;
+	bottom:0px;
+	height:auto;
+	left:3px;
+	right:3px;
+	overflow:hidden;
+
+}
+
+div.panel-container{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	height:auto;
+	left:0px;
+	right:0px;
+	width:auto;
+	overflow:auto;
+	border:solid 1px black;
+}
+div.panel-container>div{
+	height:100%;
+	background-color:white;
+	width:100%;
+}
+div.panel.center >div.panel-container{
+
+	background-color:#dadada;
+
+}
+
+div.panel.right[docked="1"]{
+	right:0px;
+	margin-right:0px;
+}
+
+div.panel.left[docked="1"]{
+	left:0px;
+	top:0px;
+	margin-left:0px;
+}
+div.panel.right[docked="1"] div.panel-content,
+div.panel.left[docked="1"] div.panel-content{
+	opacity:0.9;
+}
+
+div.panel.bottom[docked="1"]{
+	bottom:0px;
+	margin-bottom:0px;
+}
+
+div.panel[docked="1"] div.panel-button{
+	background-color:#ccc;
+	z-index:14000;
+}
+div.panel-container>div.panel-button{
+	position:absolute;
+	right:2px;
+	top:2px;
+	height:14px;
+	width:14px;
+	background-color:white;	
+	border:solid 0.5mm;	
+}
+div.panel-container>div.panel-content{
+	background-color:transparent;
+}

@@ -1,0 +1,47 @@
+	var r=[0,0,0];
+	var t=[0,0,0];
+	var u=['deg','px','px'];
+	var s=[0,0,0];
+	var tt=[],rr=[],ss=[];
+	var xx=['rotate','translate','scale'];
+	
+	var vj=['X','Y','Z'];
+	var y=[r,t,s];
+
+	
+	document.body.onkeydown=function(){
+		var plano=-1;
+		switch(String.fromKeyCode(event.keyCode)) {
+			case 'Z':plano=2;break;
+			case 'Y':plano=1;break;
+			case 'X':plano=0;break;
+			case 'R': action=0; break;
+			case 'T': action=1; break;
+			case 'S': action=2; break;
+			case 'M': delta=1; break;
+			case 'N': delta=-1; break;
+		default:return;	 break;
+		}
+			y[action][plano]=(+y[action][plano])-delta;
+		var wk='';
+		for (var i=0; i<y.length; ++i) {
+			for (var j=0; j<y[i].length; ++j) {
+				wk+=xx[i]+vj[j]+'('+y[i][r[j]]+u[i]+') ';
+			}
+		}		
+		document.getElementById('app1').style['-webkit-transform']=wk;
+		}
+		
+	}
+	
+	
+	
+	} in 
+	for (var i=0, i<xx.length; ++i){
+		if (rr) rr+=', ';
+		if (rr) rr+=', ';
+		rr += 'rotate'+xx[i];
+		
+	}	in xx) {}
+	rotate+xx[i] X(r[]
+}

@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<style>
+			p{
+				background-color:red;
+				color:whre;
+			}
+			table{
+				float:left;
+				border:solid 1px black;
+				vertical-align:top;
+			 }
+		</style>
+		<script>
+			function onClick() {
+				document.body.innerHTML+=oPara.style.cssText;
+				var s = '<div>';
+				s+='<table><tbody>';
+				for (var i in oPara.currentStyle) {
+					s+='<tr><td>'+i+'</td><td>'+oPara.currentStyle[i]+'</td></tr>';
+				}
+				s+='</tbody></table>';
+				s+='<table><tbody>';
+				for (var i in oPara.runtimeStyle) {
+					//if (oPara.runtimeStyle[i] != '')
+						s+='<tr><td>'+i+'</td><td>'+oPara.runtimeStyle[i]+'</td></tr>';
+				}
+				s+='</tbody></table>';
+				
+				s+='</div>';
+				document.body.innerHTML+=s;
+			}
+		</script>
+	</head>
+	<body>
+		<p id="oPara" style="color:'green'; font-weight:bold">
+		This is the test paragraph.</P>
+		:
+		<button onclick="onClick()">
+		Get CSS attributes</button>
+	</body>
+</html>

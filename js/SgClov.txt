@@ -1,0 +1,25 @@
+var output = (function(){
+	var instance = null;
+	
+	IISgOutput.prototype.screen=null;
+	
+	IISgOutput.prototype.setContent=function setContent(c){
+		if (!this.screen) this.init();
+		this.screen.setContent(c,true);
+	}
+	IISgOutput.prototype.init=function init(){
+		this.screen=sgApp.newApplication({appname:'Output'});
+		this.screen.element.setAttribute('state',1)
+
+		this.screen.saveBox();
+	}
+	
+	
+	function IISgOutput(){
+		
+	}
+	
+	
+	
+	return instance ? instance : instance = new IISgOutput();
+})()

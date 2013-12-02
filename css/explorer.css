@@ -1,0 +1,172 @@
+div.explorer{
+	position:absolute;
+	left:0px;
+	right:0px;
+	width:auto;
+	height:auto;
+}
+
+
+div.sgapp.Output.window > div.head.container,
+div.sgapp.Output.window > div > div.sgbar.title-bar {
+	height:30px;
+}
+div.head.container{
+	position:relative;
+	height:60px;
+	width:100%;
+	opacity:0.9;
+	border-top-left-radius:10px;	
+	border-top-right-radius:10px;		
+}
+
+div.body.container{
+	border-left:solid 1px black;
+	border-right:solid 1px black;
+	overflow:hidden;
+}
+div.body.container{
+	position:absolute;
+	top:61px;
+	height:auto;
+	bottom:20px;
+	left:0px;
+	right:0px;
+	width:auto;
+	margin:0 0px;
+	background-color:blue;
+}
+
+div.tail.container{
+	position:absolute;
+	height:20px;
+	width:auto;
+	left:0;
+	right:0;
+	bottom:0px;
+	border-left:solid 1px black;
+	border-right:solid 1px black;
+		
+	*background-color:green;
+}
+
+div.explorer.head{
+	bottom:0px;
+	top:60px;
+
+}
+div.explorer.head.container{
+	background-color:blue;
+}
+
+div.explorer.body.container{
+	background-color:red;
+}
+
+div.url-drop{
+	background-image:url('../img/abrir.png');
+	background-position:1 3;
+	background-repeat:no-repeat;
+	padding-left:22px;
+	float:left;
+}
+
+div.directory-entry:hover{
+	background-color:rgba(255, 255, 255, 0.31);
+	margin: 0 2 0 0;
+}
+div.directory-entry>div:focus{
+	outline-color:transparent!important;
+}
+-webkit-box-shadow	
+div.tree-node,
+div.directory-entry{
+	background-position:0 0;
+	background-repeat:no-repeat;
+	position: relative;
+}
+
+div.tree-node[type="1"],
+div.directory-entry[type="1"]{
+	background-size:16px;
+	margin:2px 2px 2px 5px;
+}
+
+div.tree-node[type="1"]{
+	padding-left:28px;
+}
+
+
+div.directory-entry:activated[type="2"]{
+	border:solid 0.5mm red;
+	border-radius:8px;
+}
+
+div.directory-entry[type="2"]{
+	float:left;
+	background-size:40px;
+	height:65px;
+	width:65px;
+	margin:2px 2px 2px 5px;
+	padding-top:36px;
+	height:20;
+	background-position:50% 0;
+	text-align:center;
+	border:solid 0.5mm transparent;
+	opacity:0.8;
+	transition: border 1s, opacity 2s, border-radius 0.5s;
+	border-radius:0px;
+}
+
+div.directory-entry[type="2"]:hover{
+	opacity:1;
+	border:solid 0.5mm #555;
+	border-radius:8px;
+	
+}
+
+div.directory-entry[type="1"]{
+	padding-left:17px;
+
+}
+
+div.directory-entry[type="1"]{
+	height:20px;
+}
+
+div.panel-content>div.tree-node:first-child{
+	margin-top:20px;
+}
+
+div.tree-node{
+	
+}
+div.tree-node{
+	background-position:12px 0;
+	margin-left:28;
+	background-repeat:no-repeat;
+	position: relative;
+	
+}
+
+div.tritoogle[state="1"]+div{
+	*float:left;
+	*position:relative!important;
+	margin-left:-20px;
+}
+div.tritoogle[state="0"]+div{
+	margin-left:-20px;
+	display:none;
+}
+div.tree-node>tritoogle+div{
+	margin-left:-20px;
+	*position:relative!important;
+	*left:7px;
+}
+div.tritoogle{
+	
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:transparent;
+}
