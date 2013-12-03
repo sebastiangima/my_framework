@@ -1,6 +1,6 @@
 // letter 'b' -> step on Suppaplex.onTimer
 var global = {
-	running : false,	// toggle state with letter 'a'
+	running : true,	// toggle state with letter 'a'
 										// shift state with letter 't'
 	debug: false,	// shift state with letter 'd'
 	stepDebugger: true
