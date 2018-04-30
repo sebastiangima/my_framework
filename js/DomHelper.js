@@ -380,6 +380,7 @@ var domHelper = (function(){
 		if (!window.getMatchedCSSRules) {
 			var v=['height','width','left','top','bottom','right','margin-top','margin-right','margin-left','margin-bottom'];
 			var st={};
+			if(!node.currentStyle) node.currentStyle=window.getComputedStyle(node)
 			for (var i=0; i<v.length; ++i) {
 				st[v[i]]=node.currentStyle[v[i].toCamelCase()];
 			}
