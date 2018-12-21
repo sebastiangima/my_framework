@@ -377,7 +377,7 @@ var domHelper = (function(){
 		var c = node.classList
 		var rules=[];
 		
-		if (!window.getMatchedCSSRules) {
+		if (!window.getMatchedCSSRules && node.currentStyle) {
 			var v=['height','width','left','top','bottom','right','margin-top','margin-right','margin-left','margin-bottom'];
 			var st={};
 			for (var i=0; i<v.length; ++i) {
