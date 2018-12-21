@@ -386,6 +386,7 @@ var domHelper = (function(){
 			rules.push({style:st});
 			return rules;
 		}
+		if(! window.getMatchedCSSRules) return rules;
     var r = window.getMatchedCSSRules(node, '');
     var i = r.length;
     while (i--) {
